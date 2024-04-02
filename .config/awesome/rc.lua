@@ -347,9 +347,9 @@ globalkeys = gears.table.join(
               {description = "Open powermenu", group = "client"}),
 
     -- Rofi application runner
-    awful.key({ modkey },            "r",     function () 
-	    awful.spawn.with_shell(home_path .. "/.config/rofi/launchers/type-1/launcher.sh") end,
-              {description = "run prompt", group = "launcher"}),
+    awful.key({ modkey },            "r",     function ()
+	    awful.spawn.with_shell(home_path .. "/.config/rofi/apprunner.sh") end,
+              {description = "Open application runner", group = "launcher"}),
 
 
 
