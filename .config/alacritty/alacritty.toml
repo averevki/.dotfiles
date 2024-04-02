@@ -1,0 +1,86 @@
+# colors are extracted from https://github.com/alacritty/alacritty-theme
+#import = [
+#    "~/.config/alacritty/themes/themes/nord.toml"
+#]
+
+live_config_reload = true
+
+[colors.bright]
+black = "#4C566A"
+blue = "#81A1C1"
+cyan = "#8FBCBB"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#ECEFF4"
+yellow = "#EBCB8B"
+
+[colors.normal]
+black = "#3B4252"
+blue = "#81A1C1"
+cyan = "#88C0D0"
+green = "#A3BE8C"
+magenta = "#B48EAD"
+red = "#BF616A"
+white = "#E5E9F0"
+yellow = "#EBCB8B"
+
+[colors.primary]
+background = "#2E3440"
+foreground = "#D8DEE9"
+
+[cursor]
+blink_interval = 1500
+thickness = 0.2
+
+[shell]
+program = "/usr/bin/bash"
+
+[cursor.style]
+blinking = "Always"
+shape = "Beam"
+
+[env]
+LANG = "en_US.UTF-8"
+LC_CTYPE = "en_US.UTF-8"
+TERM = "alacritty"
+
+[font.normal]
+family = "JetBrains Mono"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "ScrollLineUp"
+key = "PageUp"
+mods = "None"
+
+[[keyboard.bindings]]
+action = "ScrollLineDown"
+key = "PageDown"
+mods = "None"
+
+[scrolling]
+multiplier = 3
+
+[selection]
+save_to_clipboard = true
+
+[window]
+opacity = 0.8
+
+[window.dimensions]
+columns = 100
+lines = 25
+
+[window.padding]
+x = 5
+y = 5
+
+[window.position]
+x = 1450
+y = 600

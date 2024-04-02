@@ -1,0 +1,6 @@
+# store all completions inside ~/.bash_completion.d
+
+for f in ~/.bash_completion.d/* ; do
+  . $f
+done
+

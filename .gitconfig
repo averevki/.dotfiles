@@ -1,0 +1,47 @@
+[user]
+        name = averevki
+        email = sandyverevkin@gmail.com
+        signingKey = 2A21047F8D09A0EB7ABE41CBBBCF290C9708D8B2
+[commit]
+        gpgsign = true
+
+[color]
+        ui = true
+
+[core]
+        ; Whitespace problems that git should recognize
+        whitespace = trailing-space,space-before-tab
+
+[alias]
+        a = add
+        aa = add -A
+        authors = "!git log --pretty=format:%aN | sort | uniq -c | sort -rn"
+        br = branch -vv
+        bra = branch -vv --all
+	c = commit --verbose
+	ca = commit --amend
+        can = commit --amend --no-edit
+        cl = clone
+        co = checkout
+        cob = checkout -b
+        d = diff
+        ds = diff --staged
+        db = "!git branch --delete \"$1\" && git push origin --delete \"$1\" #"
+        l = "!git --no-pager log -20 --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'; echo"
+        ll = log --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+        lf = log --name-status --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+        lp = log --patch --format=fuller
+        lg = log --graph --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+        lga = log --graph --branches --remotes --tags --pretty='format:%C(yellow)%h %C(green)%ai %C(bold blue)%an %C(red)%d%C(reset) %s'
+        p = push
+        pf = push -f
+        pa = "!git push && git push --tags"
+        pb = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
+        s = status --short --branch
+        smu = submodule update --init --recursive
+        sync-fork = "!git fetch upstream && git rebase upstream/`git rev-parse --abbrev-ref HEAD` && git push"
+[credential "https://github.com"]
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = !/usr/bin/gh auth git-credential
+
