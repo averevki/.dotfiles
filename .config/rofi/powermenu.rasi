@@ -13,7 +13,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import "~/.config/rofi/colors/nord.rasi"
+@import "~/.config/rofi/nord.rasi"
 
 * {
     font: "IBM Plex Sans Medm 10";
