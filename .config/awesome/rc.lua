@@ -101,8 +101,7 @@ mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesom
                                   }
                         })
 
-mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
-                                     menu = mymainmenu })
+mylauncher = awful.widget.launcher({ menu = mymainmenu })
 
 -- Menubar configuration
 menubar.utils.terminal = terminal -- Set the terminal for applications that require it
@@ -495,7 +494,15 @@ awful.rules.rules = {
                      placement = awful.placement.no_overlap+awful.placement.no_offscreen
      }
     },
-
+    -- Custom window rules
+    {
+	rule = {class = "discord"},
+	properties = {tag = "4", switchtotag = true},
+    },
+    {
+	rule = {class = "Spotify"},
+	properties = {tag= "5", switchtotag = true}
+    },
     -- Floating clients.
     { rule_any = {
         instance = {
@@ -551,6 +558,12 @@ client.connect_signal("manage", function (c)
         -- Prevent clients from being unreachable after screen count changes.
         awful.placement.no_offscreen(c)
     end
+
+    --[[ rounded window corners with radius 5
+    c.shape = function(cr, w, h)
+        gears.shape.rounded_rect(cr, w, h, 5)
+    end]]
+
 end)
 
 -- Add a titlebar if titlebars_enabled is set to true in the rules.
@@ -615,4 +628,7 @@ awful.spawn.with_shell("xinput set-prop \"$(xinput list --name-only | grep -i to
 
 -- EasyEffect sound equalizer
 awful.spawn.with_shell("easyeffects --gapplication-service")
+
+-- Enable network-manager-applet tray widget
+awful.spawn.with_shell("nm-applet --indicator")
 
