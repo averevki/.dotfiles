@@ -44,10 +44,12 @@ export GPG_TTY=$(tty)
 # Completion for aliases
 source /usr/share/bash-completion/completions/git
 __git_complete g __git_main
-
 alias g='git'
-alias gc='git-crypt'
 
+complete -F __start_kubectl k
+alias k='kubectl'
+
+alias gc='git-crypt'
 alias ..="cd .."
 alias pacman="sudo pacman"
 alias pipenvs="ls ~/.local/share/virtualenvs/"
