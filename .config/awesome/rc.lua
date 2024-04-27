@@ -503,6 +503,14 @@ awful.rules.rules = {
 	rule = {class = "Spotify"},
 	properties = {tag= "5", switchtotag = true}
     },
+    {
+        rule = {class = "TelegramDesktop"},
+        properties = {floating = true, x=150, y=150}
+    },
+    {
+        rule = {class = "Pavucontrol"},
+        properties = {floating = true, x=150, y=150}
+    },
     -- Floating clients.
     { rule_any = {
         instance = {
