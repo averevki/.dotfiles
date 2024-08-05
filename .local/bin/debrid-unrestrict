@@ -1,0 +1,38 @@
+#!/usr/bin/env bash
+
+set -a && source .env && set +a  # export REAL_DEBRID_API_KEY env variable
+
+MEDIA_DIR="/home/averevki/Downloads/movies"
+
+REAL_DEBRID_API="https://api.real-debrid.com/rest/1.0"
+CHECK_URL="$REAL_DEBRID_API/unrestrict/check"
+UNRESTRICT_URL="$REAL_DEBRID_API/unrestrict/link"
+
+if [[ $# -eq 0 ]]; then
+    echo "No links provided"
+    exit 1
+fi
+
+echo "Verifying links availability..."
+for link in "$@"; do
+    HTTP_CODE=$(curl -sX POST -o /dev/null -w '%{http_code}' -H "Authorization: Bearer $REAL_DEBRID_API_KEY" -d "link=$link" $CHECK_URL)
+    if [[ $HTTP_CODE -ne 200 ]]; then
+        echo "One or more links are not valid (status code: $HTTP_CODE)"
+        exit 1
+    fi
+done
+
+link_count=1
+for link in "$@"; do  # unrestrict links and download to temp directory
+   UNRESTRICTED_LINK=$(curl -sX POST -H "Authorization: Bearer $REAL_DEBRID_API_KEY" -d "link=$link" $UNRESTRICT_URL | jq -r '.download')
+   echo "$(tput setaf 2)Downloading ${UNRESTRICTED_LINK##*/} ($link_count/$#)$(tput setaf 7)"
+   curl --progress-bar -LO $UNRESTRICTED_LINK --create-dirs --output-dir /tmp/movies
+   ((link_count++))
+done
+
+unrar x -idc /tmp/movies/${UNRESTRICTED_LINK##*/} $MEDIA_DIR  # extract downloaded archives to the media directory
+
+tput setaf 1
+echo "Play command:"
+echo "mpv $MEDIA_DIR/$(unrar l /tmp/movies/${UNRESTRICTED_LINK##*/} | grep ".mkv" | awk '{print $NF}')"
+tput setaf 7
