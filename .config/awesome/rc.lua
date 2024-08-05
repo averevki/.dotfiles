@@ -215,9 +215,18 @@ awful.screen.connect_for_each_screen(function(s)
         s.mytasklist, -- Middle widget
         { -- Right widgets
             layout = wibox.layout.fixed.horizontal,
-            mykeyboardlayout,
             wibox.widget.systray(),
-            mytextclock,
+	    mykeyboardlayout,
+	    wibox.widget.textbox("| "),
+	    awful.widget.watch("cat /sys/class/power_supply/BAT0/capacity", 60, function(widget, stdout)
+		    local battery = tonumber(stdout:sub(1, -2))  -- remove newline from stdout
+		    if battery <= 20 then
+			    widget:set_markup("<span foreground='#D22B2B'>" .. battery ..  "%</span> |")
+		    else
+			    widget:set_markup(battery .. "% |")
+		    end
+	    end),
+	    mytextclock,
             s.mylayoutbox,
         },
     }
