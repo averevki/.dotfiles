@@ -46,3 +46,4 @@ for _ in range(3):
         sp.playlist_upload_cover_image(new_playlist["id"], image_base64)
     except Exception:
         pass
+
