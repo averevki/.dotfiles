@@ -514,6 +514,7 @@ awful.rules.rules = {
     },
     {
         rule = {class = "TelegramDesktop"},
+	except = { name = "Media viewer" },
         properties = {floating = true, x=150, y=150}
     },
     {
