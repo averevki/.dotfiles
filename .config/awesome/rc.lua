@@ -218,14 +218,14 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.widget.systray(),
 	    mykeyboardlayout,
 	    wibox.widget.textbox("| "),
-	    awful.widget.watch("cat /sys/class/power_supply/BAT0/capacity", 60, function(widget, stdout)
-		    local battery = tonumber(stdout:sub(1, -2))  -- remove newline from stdout
-		    if battery <= 20 then
-			    widget:set_markup("<span foreground='#D22B2B'>" .. battery ..  "%</span> |")
-		    else
-			    widget:set_markup(battery .. "% |")
-		    end
-	    end),
+	    --awful.widget.watch("cat /sys/class/power_supply/BAT0/capacity", 60, function(widget, stdout)
+	--	    local battery = tonumber(stdout:sub(1, -2))  -- remove newline from stdout
+	--	    if battery <= 20 then
+	--		    widget:set_markup("<span foreground='#D22B2B'>" .. battery ..  "%</span> |")
+	--	    else
+	--		    widget:set_markup(battery .. "% |")
+	--	    end
+	  --  end),
 	    mytextclock,
             s.mylayoutbox,
         },
@@ -251,6 +251,23 @@ globalkeys = gears.table.join(
               {description = "view next", group = "tag"}),
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
+
+    awful.key({ modkey, "Shift"   }, "Left",
+        function ()
+            if client.focus then
+                local screen = awful.screen.focused()
+                client.focus:move_to_screen(screen.index - 1)
+            end
+        end,
+        {description = "move window to previous screen", group = "screen"}),
+    awful.key({ modkey, "Shift"   }, "Right",
+        function ()
+            if client.focus then
+                local screen = awful.screen.focused()
+                client.focus:move_to_screen(screen.index + 1)
+            end
+        end,
+        {description = "move window to next screen", group = "screen"}),
 
     awful.key({ modkey,           }, "j",
         function ()
