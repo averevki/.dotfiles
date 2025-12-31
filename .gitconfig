@@ -39,7 +39,8 @@
         pb = "!git push --set-upstream origin `git rev-parse --abbrev-ref HEAD`"
         s = status --short --branch
         smu = submodule update --init --recursive
-        sync-fork = "!git fetch upstream && git rebase upstream/`git rev-parse --abbrev-ref HEAD` && git push"
+	sync-fork = "!git fetch upstream && git rebase upstream/`git rev-parse --abbrev-ref HEAD` && git push"
+	rmc= "!git rebase --onto $1^ $1"  # delete all commits until $1 commit
 [credential "https://github.com"]
 	helper = !/usr/bin/gh auth git-credential
 [credential "https://gist.github.com"]
