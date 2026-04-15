@@ -11,12 +11,26 @@ stty -ixon
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 
+alias vim="nvim"
+alias vi="nvim"
+
 # PS1
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
 export PS1="\[\e[34m\]\W \[\e[31m\]\$(parse_git_branch)\[\e[0m\]\[\e[34m\]❯\[\e[00m\] "
 
+# Bash history
+HISTCONTROL=ignoredups:erasedups
+HISTFILESIZE=15000
+HISTSIZE=15000
+shopt -s histappend
+# After each command, append to the history file and reread it
+PROMPT_COMMAND="${PROMPT_COMMAND:+$PROMPT_COMMAND$'\n'}history -a; history -c; history -r"
+
+
+
+# Archives extraction
 ex() {
     if [ -f "$1" ] ; then
 	case "$1" in
@@ -36,7 +50,7 @@ ex() {
 
 
 # Editor
-export VISUAL=/usr/bin/vim
+export VISUAL=/usr/sbin/nvim
 export EDITOR="$VISUAL"
 # GPG signing
 export GPG_TTY=$(tty)
@@ -48,10 +62,13 @@ alias g='git'
 
 complete -F __start_kubectl k
 alias k='kubectl'
+complete -F __start_minikube mk
+alias mk='minikube'
 
 alias gc='git-crypt'
 alias ..="cd .."
 alias pacman="sudo pacman"
+alias pu="pacman -Syu"
 alias pipenvs="ls ~/.local/share/virtualenvs/"
 
 # PATH
@@ -59,9 +76,17 @@ export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/go/bin"
 export PATH="$PATH:$HOME/.screenlayout"
 export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$PATH:$HOME/.istioctl/bin"
+export PATH=$PATH:$HOME/.npm-global/bin
 
 # ocp-tool
 export OCP_CLUSTER_MANAGEMENT_DIR=~/work/cluster-management
-source ~/.local/src/ocp-tool/scripts/ocp.sh
-source ~/.local/src/ocp-tool/scripts/ocp.bash.completion
+source ~/.local/src/ocp-tool/ocp.sh
+source ~/.local/src/ocp-tool/completions/ocp.bash.completion
+
+# pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"
+
 

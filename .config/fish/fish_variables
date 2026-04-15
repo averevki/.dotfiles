@@ -1,6 +1,20 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3400
-SETUVAR --export fish_color_normal:normal
-SETUVAR fish_key_bindings:fish_default_key_bindings
-SETUVAR fish_user_paths:/home/averevki/\x2elocal/bin\x1e/home/averevki/go/bin\x1e/home/averevki/\x2escreenlayout
+SETUVAR __fish_initialized:4300
+SETUVAR _fisher_edc_2F_bass_files:\x7e/\x2econfig/fish/functions/__bass\x2epy\x1e\x7e/\x2econfig/fish/functions/bass\x2efish
+SETUVAR _fisher_jorgebucaran_2F_fisher_files:\x7e/\x2econfig/fish/functions/fisher\x2efish\x1e\x7e/\x2econfig/fish/completions/fisher\x2efish
+SETUVAR _fisher_jorgebucaran_2F_hydro_files:\x7e/\x2econfig/fish/functions/fish_mode_prompt\x2efish\x1e\x7e/\x2econfig/fish/functions/fish_prompt\x2efish\x1e\x7e/\x2econfig/fish/conf\x2ed/hydro\x2efish
+SETUVAR _fisher_plugins:jorgebucaran/fisher\x1eedc/bass\x1ejorgebucaran/hydro
+SETUVAR _fisher_upgraded_to_4_4:\x1d
+SETUVAR _hydro_git_105390:enable\x2dx509\x2dtests\x2a\x20
+SETUVAR _hydro_git_146566:gh\x2d1799\x2a\x20
+SETUVAR _hydro_git_151900:main\x2a\x20
+SETUVAR _hydro_git_171948:add\x2dgwapi\x2dv1\x2e5\x2a\x20
+SETUVAR _hydro_git_18329:egress\x2dcredentials\x2dinjection\x2a\x20
+SETUVAR _hydro_git_202590:main\x2a\x20
+SETUVAR _hydro_git_31803:enable\x2dx509\x2dtests\x2a\x20
+SETUVAR _hydro_git_33947:main\x2a\x20
+SETUVAR _hydro_git_6577:egress\x2dcredentials\x2dinjection\x2a\x20
+SETUVAR _hydro_git_71720:enable\x2dx509\x2dtests\x2a\x20
+SETUVAR _hydro_git_8078:gh\x2d1800\x2a\x20
+SETUVAR fish_user_paths:/home/averevki/\x2enpm\x2dglobal/bin\x1e/home/averevki/\x2eistioctl/bin\x1e/home/averevki/\x2elocal/bin\x1e/home/averevki/go/bin\x1e/home/averevki/\x2escreenlayout
