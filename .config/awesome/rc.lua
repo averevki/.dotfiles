@@ -305,7 +305,7 @@ globalkeys = gears.table.join(
         {description = "go back", group = "client"}),
 
     -- Standard program
-    awful.key({ "Control", "Mod1" }, "t", function () awful.spawn(terminal) end,
+    awful.key({ "Control", "Mod1" }, "t", function () awful.spawn(terminal .. " --working-directory="..home_path.."/work/") end,
               {description = "open a terminal", group = "launcher"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
@@ -376,7 +376,13 @@ globalkeys = gears.table.join(
 	    awful.spawn.with_shell(home_path .. "/.config/rofi/apprunner.sh") end,
               {description = "Open application runner", group = "launcher"}),
 
-
+    -- Toggle wibar visibility (OLED burn-in prevention)
+    awful.key({ modkey }, "b",
+        function ()
+            local s = awful.screen.focused()
+            s.mywibox.visible = not s.mywibox.visible
+        end,
+        {description = "toggle wibar", group = "awesome"}),
 
     awful.key({ modkey }, "x",
               function ()
@@ -532,11 +538,11 @@ awful.rules.rules = {
     {
         rule = {class = "TelegramDesktop"},
 	except = { name = "Media viewer" },
-        properties = {floating = true, x=150, y=150}
+        properties = {floating = true, x=1000, y=1000}
     },
     {
         rule = {class = "Pavucontrol"},
-        properties = {floating = true, x=150, y=150}
+        properties = {floating = true, x=1000, y=1000}
     },
     -- Floating clients.
     { rule_any = {
