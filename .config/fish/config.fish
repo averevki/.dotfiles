@@ -82,6 +82,7 @@ alias kctx='kubectx'
 alias kns='kubens'
 alias mk='minikube'
 alias gc='git-crypt'
+alias glab='gl'
 alias ..='cd ..'
 alias pacman='sudo pacman'
 alias pu='pacman -Syu'
@@ -105,3 +106,13 @@ fish_add_path $PYENV_ROOT/bin
 if command -q pyenv
     pyenv init - fish | source
 end
+
+# Google Cloud SDK
+if test -f "$HOME/Downloads/google-cloud-sdk/path.fish.inc"
+    source "$HOME/Downloads/google-cloud-sdk/path.fish.inc"
+end
+
+# GCP & CLAUDE
+set -gx CLAUDE_CODE_USE_VERTEX 1
+set -gx CLOUD_ML_REGION us-east5
+set -gx ANTHROPIC_VERTEX_PROJECT_ID itpc-gcp-hcm-pe-eng-claude
