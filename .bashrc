@@ -66,6 +66,7 @@ complete -F __start_minikube mk
 alias mk='minikube'
 
 alias gc='git-crypt'
+alias gl='glab'
 alias ..="cd .."
 alias pacman="sudo pacman"
 alias pu="pacman -Syu"

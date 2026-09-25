@@ -16,6 +16,6 @@ SETUVAR _hydro_git_31803:enable\x2dx509\x2dtests\x2a\x20
 SETUVAR _hydro_git_33947:main\x2a\x20
 SETUVAR _hydro_git_47240:grpcroute\x2dtests\x2a\x20
 SETUVAR _hydro_git_6577:egress\x2dcredentials\x2dinjection\x2a\x20
-SETUVAR _hydro_git_71540:main\x2a\x20
+SETUVAR _hydro_git_71540:main\x2a\x20\u21912\x20
 SETUVAR _hydro_git_71720:enable\x2dx509\x2dtests\x2a\x20
 SETUVAR fish_user_paths:/home/averevki/\x2enpm\x2dglobal/bin\x1e/home/averevki/\x2eistioctl/bin\x1e/home/averevki/\x2elocal/bin\x1e/home/averevki/go/bin\x1e/home/averevki/\x2escreenlayout

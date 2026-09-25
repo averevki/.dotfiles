@@ -33,7 +33,7 @@ blink_interval = 1500
 thickness = 0.2
 
 [terminal.shell]
-program = "/usr/bin/bash"
+program = "/usr/bin/fish"
 
 [cursor.style]
 blinking = "Always"
@@ -43,6 +43,9 @@ shape = "Beam"
 LANG = "en_US.UTF-8"
 LC_CTYPE = "en_US.UTF-8"
 TERM = "alacritty"
+
+[font]
+size = 8.8
 
 [font.normal]
 family = "JetBrains Mono"
@@ -88,3 +91,8 @@ y = 600
 live_config_reload = true
 
 [terminal]
+
+[[keyboard.bindings]]
+key = "Return"
+mods = "Shift"
+chars = "\u001B\r"
