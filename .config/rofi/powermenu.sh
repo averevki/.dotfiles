@@ -5,11 +5,11 @@ uptime=$(uptime -p | sed -e "s/up //g")
 hostname=$(hostname)
 
 # Options
-lock=" Lock"
-suspend=" Suspend"
-logout=" Logout"
-reboot=" Reboot"
-poweroff=" Shutdown"
+lock="Lock"
+suspend="Suspend"
+logout="Logout"
+reboot="Reboot"
+poweroff="Shutdown"
 
 # Execute Rofi
 rofi_output=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$poweroff" | \
