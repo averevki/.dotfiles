@@ -92,6 +92,13 @@ input * {
     xkb_options "grp:alt_shift_toggle,grp:win_space_toggle"
 }
 
+# Touchpad config
+input "type:touchpad" {
+    dwt enabled
+    tap enabled
+    middle_emulation enabled
+}
+
 ### Key bindings
 #
 # Basics:
@@ -253,6 +260,7 @@ assign [app_id="spotify"] workspace number 5
 for_window [app_id="spotify"] workspace number 5
 assign [app_id="discord"] workspace number 4
 for_window [app_id="org.telegram.desktop"] floating enable, resize set 1120 900
+for_window [title="Picture-in-Picture"] floating enable
 
 ### Status bar
 #

@@ -16,7 +16,7 @@ configuration {
 @import "~/.config/rofi/nord.rasi"
 
 * {
-    font: "IBM Plex Sans Medm 10";
+    font: "Cantarell 10";
 }
 
 configuration {
