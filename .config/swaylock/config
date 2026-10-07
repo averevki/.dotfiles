@@ -1,1 +1,54 @@
-image=~/.config/sway/black-mountain-4k-wallpapers.jpg
+# User swaylock-effects configuration
+# Overrides /etc/swaylock/config
+
+# Screenshot current windows and blur them
+# Use 'screenshots' instead of 'image' to capture current screen
+screenshots
+effect-blur=7x5
+
+# Alternative: use static background image (commented out)
+# image=~/.config/sway/black-mountain-4k-wallpapers.jpg
+# scaling=fill
+
+# Clock and date display
+clock
+datestr=%d %b %Y
+timestr=%H:%M
+
+# Grace period (3 seconds before requiring password)
+grace=3
+grace-no-mouse
+grace-no-touch
+
+# Indicator appearance
+indicator
+indicator-radius=120
+indicator-thickness=10
+
+# Color scheme (adjust to your preference)
+text-color=ffffff
+text-clear-color=ffffff
+text-ver-color=ffffff
+text-wrong-color=e57373
+
+inside-color=00000088
+inside-clear-color=ffffffaa
+inside-ver-color=00000088
+inside-wrong-color=00000088
+
+ring-color=ffffff88
+ring-clear-color=ffffffaa
+ring-ver-color=81c784ff
+ring-wrong-color=c78481ff
+
+key-hl-color=81c784ff
+bs-hl-color=c78481ff
+line-color=00000088
+separator-color=00000000
+
+# Font
+font=Cantarell, Noto Sans, sans-serif
+#font-size=32
+
+# Show indicator when idle
+indicator-idle-visible

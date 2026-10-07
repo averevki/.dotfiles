@@ -3,7 +3,7 @@ if status is-interactive
     stty -ixon
 
     # Alt+c: append clipboard pipe to current command (or last if commandline is empty)
-    bind \ec 'if test -z (commandline); commandline (history | head -1); end; commandline -a " | xclip -sel clipboard"'
+    bind \ec 'if test -z (commandline); commandline (history | head -1); end; commandline -a " | wl-copy -n"'
 end
 
 # function fish_prompt
@@ -82,8 +82,8 @@ if command -q pyenv
 end
 
 # Google Cloud SDK
-if test -f "$HOME/Downloads/google-cloud-sdk/path.fish.inc"
-    source "$HOME/Downloads/google-cloud-sdk/path.fish.inc"
+if test -f "$HOME/.local/src/google-cloud-sdk/path.fish.inc"
+    source "$HOME/.local/src/google-cloud-sdk/path.fish.inc"
 end
 
 # GCP & CLAUDE
