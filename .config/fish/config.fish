@@ -93,3 +93,6 @@ set -gx ANTHROPIC_VERTEX_PROJECT_ID itpc-gcp-hcm-pe-eng-claude
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/averevki/.local/src/google-cloud-sdk/path.fish.inc' ]; . '/home/averevki/.local/src/google-cloud-sdk/path.fish.inc'; end
+
+source "$HOME/.cargo/env.fish"
+

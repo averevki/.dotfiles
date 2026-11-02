@@ -57,6 +57,11 @@ key = "Return"
 mods = "Control|Shift"
 
 [[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "Return"
+mods = "Control|Alt"
+
+[[keyboard.bindings]]
 action = "ScrollLineUp"
 key = "PageUp"
 mods = "None"
