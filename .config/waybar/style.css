@@ -12,23 +12,23 @@
 
 @keyframes blink-warning {
     70% {
-        color: white;
+        color: #d9dbbb;
     }
 
     to {
-        color: white;
-        background-color: orange;
+        color: #25291a;
+        background-color: #c9a227;
     }
 }
 
 @keyframes blink-critical {
     70% {
-      color: white;
+      color: #d9dbbb;
     }
 
     to {
-        color: white;
-        background-color: red;
+        color: #f0e4de;
+        background-color: #a8432d;
     }
 }
 
@@ -48,8 +48,8 @@
 
 /* The whole bar */
 #waybar {
-    background: #323232;
-    color: white;
+    background: #25291a;
+    color: #d9dbbb;
     font-family: Cantarell, Noto Sans, sans-serif;
     font-size: 13px;
 }
@@ -81,11 +81,11 @@
 }
 
 #battery.warning {
-    color: orange;
+    color: #c9a227;
 }
 
 #battery.critical {
-    color: red;
+    color: #d4624a;
 }
 
 #battery.warning.discharging {
@@ -107,11 +107,11 @@
 }
 
 #cpu.warning {
-    color: orange;
+    color: #c9a227;
 }
 
 #cpu.critical {
-    color: red;
+    color: #d4624a;
 }
 
 #memory {
@@ -121,18 +121,18 @@
 }
 
 #memory.warning {
-    color: orange;
+    color: #c9a227;
 }
 
 #memory.critical {
-    color: red;
+    color: #d4624a;
     animation-name: blink-critical;
     animation-duration: 2s;
 }
 
 #mode {
-    background: #64727D;
-    border-top: 2px solid white;
+    background: #565833;
+    border-top: 2px solid #d9dbbb;
     /* To compensate for the top border and still have vertical centering */
     padding-bottom: 2px;
 }
@@ -142,7 +142,7 @@
 }
 
 #network.disconnected {
-    color: orange;
+    color: #c9a227;
 }
 
 #pulseaudio {
@@ -154,7 +154,7 @@
 }
 
 #custom-spotify {
-    color: rgb(102, 220, 105);
+    color: #9fb45c;
 }
 
 #temperature {
@@ -162,7 +162,7 @@
 }
 
 #temperature.critical {
-    color: red;
+    color: #d4624a;
 }
 
 #tray {
@@ -179,17 +179,17 @@
     padding-bottom: 2px;
     padding-left: 10px;
     padding-right: 10px;
-    color: #888888;
+    color: #9aa070;
 }
 
 #workspaces button.focused {
-    border-color: #4c7899;
-    color: white;
-    background-color: #285577;
+    border-color: #867e46;
+    color: #e8e6cf;
+    background-color: #43482c;
 }
 
 #workspaces button.urgent {
-    border-color: #c9545d;
-    color: #c9545d;
+    border-color: #d4624a;
+    color: #d4624a;
 }
 

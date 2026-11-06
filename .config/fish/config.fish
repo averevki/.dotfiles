@@ -25,10 +25,11 @@ set -g hydro_symbol_prompt ❯
 set -g hydro_symbol_git_dirty '*'
 set -g fish_prompt_pwd_dir_length 0
 
-set -g hydro_color_pwd blue
-set -g hydro_color_prompt blue
-set -g hydro_color_git red
-set -g hydro_color_duration yellow
+set -g hydro_color_pwd a7c080
+set -g hydro_color_prompt e69875
+set -g hydro_color_git 83c092
+set -g hydro_color_duration 859289
+set -g hydro_color_error e67e80
 
 # remove fish greeting message
 set -g fish_greeting

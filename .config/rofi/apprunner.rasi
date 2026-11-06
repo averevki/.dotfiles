@@ -20,7 +20,7 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import "~/.config/rofi/nord.rasi"
+@import "~/.config/rofi/colors.rasi"
 
 * {
     font: "Cantarell 10";

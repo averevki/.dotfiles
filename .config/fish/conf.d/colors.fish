@@ -1,38 +1,38 @@
-# Colorscheme: Nord with change comment and completion color
+# Colorscheme: Everforest dark with change comment and completion color
 set -gx fish_color_normal normal
-set -gx fish_color_command 88c0d0
-set -gx fish_color_quote a3be8c
-set -gx fish_color_redirection b48ead --bold
-set -gx fish_color_end 81a1c1
-set -gx fish_color_error bf616a
-set -gx fish_color_param d8dee9
-set -gx fish_color_comment 5f87af --italics
-set -gx fish_color_match --background=brblue
-set -gx fish_color_selection d8dee9 --bold --background=434c5e
-set -gx fish_color_search_match --bold --background=434c5e
-set -gx fish_color_history_current e5e9f0 --bold
-set -gx fish_color_operator 81a1c1
-set -gx fish_color_escape ebcb8b
-set -gx fish_color_cwd 5e81ac
-set -gx fish_color_cwd_root bf616a
+set -gx fish_color_command a7c080
+set -gx fish_color_quote dbbc7f
+set -gx fish_color_redirection e69875 --bold
+set -gx fish_color_end 7fbbb3
+set -gx fish_color_error e67e80
+set -gx fish_color_param d3c6aa
+set -gx fish_color_comment 859289 --italics
+set -gx fish_color_match --background=4f585e
+set -gx fish_color_selection d3c6aa --bold --background=3d484d
+set -gx fish_color_search_match --bold --background=3d484d
+set -gx fish_color_history_current d3c6aa --bold
+set -gx fish_color_operator 83c092
+set -gx fish_color_escape e69875
+set -gx fish_color_cwd a7c080
+set -gx fish_color_cwd_root e67e80
 set -gx fish_color_valid_path --underline
-set -gx fish_color_autosuggestion 5f87af
-set -gx fish_color_user a3be8c
-set -gx fish_color_host a3be8c
+set -gx fish_color_autosuggestion 7a8478
+set -gx fish_color_user a7c080
+set -gx fish_color_host 83c092
 set -gx fish_color_cancel --reverse
 set -gx fish_pager_color_background
-set -gx fish_pager_color_prefix normal --bold --underline
-set -gx fish_pager_color_progress 3b4252 --background=d08770
-set -gx fish_pager_color_completion e5e9f0
-set -gx fish_pager_color_description ebcb8b --italics
-set -gx fish_pager_color_selected_background --background=434c5e
+set -gx fish_pager_color_prefix e69875 --bold --underline
+set -gx fish_pager_color_progress 232a2e --background=e69875
+set -gx fish_pager_color_completion d3c6aa
+set -gx fish_pager_color_description dbbc7f --italics
+set -gx fish_pager_color_selected_background --background=3d484d
 set -gx fish_pager_color_selected_prefix
 set -gx fish_pager_color_selected_completion
 set -gx fish_pager_color_selected_description
 set -gx fish_pager_color_secondary_description
-set -gx fish_color_option
+set -gx fish_color_option 83c092
 set -gx fish_pager_color_secondary_completion
 set -gx fish_pager_color_secondary_prefix
 set -gx fish_pager_color_secondary_background
-set -gx fish_color_host_remote
-set -gx fish_color_keyword
+set -gx fish_color_host_remote dbbc7f
+set -gx fish_color_keyword e67e80

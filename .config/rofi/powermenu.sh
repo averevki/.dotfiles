@@ -17,7 +17,7 @@ rofi_output=$(echo -e "$lock\n$suspend\n$logout\n$reboot\n$poweroff" | \
 
 # Run command from input
 case ${rofi_output} in
-    $lock) betterlockscreen -l ;;
+    $lock) swaylock -f ;;
     $suspend) systemctl suspend ;;
     $logout) awesome --replace ;;
     $reboot) systemctl reboot ;;

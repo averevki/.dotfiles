@@ -33,7 +33,7 @@ set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # Requires: desktop-backgrounds-compat, swaybg, jxl-pixbuf-loader
-output * bg ~/.config/sway/black-mountain-4k-wallpapers.jpg fill
+output * bg ~/.config/sway/gauermann_wild_boars_wolf_stretched.png fill
 
 # Monitor layout and per-desk workspace assignments live in one file per desk
 # under ~/.config/sway/outputs/. sway has no `if`, so the choice is made
@@ -110,6 +110,9 @@ input "type:touchpad" {
 
     # Lock screen
     bindsym Ctrl+Escape exec swaylock -f
+
+    # Screenshot bindings live in config.d/60-bindings-screenshot.conf, which
+    # shadows the grimshot defaults in /usr/share/sway/config.d/.
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -245,6 +248,10 @@ bindsym $mod+d mode "resize"
 default_border none
 default_floating_border none
 hide_edge_borders both
+
+# Gap between tiled windows, suppressed when a workspace holds only one
+gaps inner 6
+smart_gaps on
 
 # Application assignments
 assign [app_id="spotify"] workspace number 5

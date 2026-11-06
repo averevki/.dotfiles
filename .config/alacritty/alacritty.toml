@@ -3,30 +3,37 @@
 #    "~/.config/alacritty/themes/themes/nord.toml"
 #
 #]
-
 [colors.bright]
-black = "#4C566A"
-blue = "#81A1C1"
-cyan = "#8FBCBB"
-green = "#A3BE8C"
-magenta = "#B48EAD"
-red = "#BF616A"
-white = "#ECEFF4"
-yellow = "#EBCB8B"
+black = "#5a5f42"
+blue = "#86a9bd"
+cyan = "#9fc4b6"
+green = "#a8b962"
+magenta = "#c78f96"
+red = "#e0754a"
+white = "#f2e8cf"
+yellow = "#f0c54f"
 
 [colors.normal]
-black = "#3B4252"
-blue = "#81A1C1"
-cyan = "#88C0D0"
-green = "#A3BE8C"
-magenta = "#B48EAD"
-red = "#BF616A"
-white = "#E5E9F0"
-yellow = "#EBCB8B"
+black = "#2a2f1c"
+blue = "#6b97ad"
+cyan = "#7fa89b"
+green = "#8a9a4a"
+magenta = "#c0858d"
+red = "#d16a3e"
+white = "#d9cfb2"
+yellow = "#d9a62b"
 
 [colors.primary]
-background = "#2E3440"
-foreground = "#D8DEE9"
+background = "#1c2113"
+foreground = "#e6c98d"
+
+[colors.cursor]
+cursor = "#f0c54f"
+text = "#1c2113"
+
+[colors.selection]
+background = "#43482c"
+text = "#f2e8cf"
 
 [cursor]
 blink_interval = 1500
