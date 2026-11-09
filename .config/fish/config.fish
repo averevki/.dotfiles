@@ -25,8 +25,8 @@ set -g hydro_symbol_prompt ❯
 set -g hydro_symbol_git_dirty '*'
 set -g fish_prompt_pwd_dir_length 0
 
-set -g hydro_color_pwd a7c080
-set -g hydro_color_prompt e69875
+set -g hydro_color_pwd F0C54F
+set -g hydro_color_prompt a7c080
 set -g hydro_color_git 83c092
 set -g hydro_color_duration 859289
 set -g hydro_color_error e67e80
@@ -86,11 +86,6 @@ end
 if test -f "$HOME/.local/src/google-cloud-sdk/path.fish.inc"
     source "$HOME/.local/src/google-cloud-sdk/path.fish.inc"
 end
-
-# GCP & CLAUDE
-set -gx CLAUDE_CODE_USE_VERTEX 1
-set -gx CLOUD_ML_REGION us-east5
-set -gx ANTHROPIC_VERTEX_PROJECT_ID itpc-gcp-hcm-pe-eng-claude
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/averevki/.local/src/google-cloud-sdk/path.fish.inc' ]; . '/home/averevki/.local/src/google-cloud-sdk/path.fish.inc'; end

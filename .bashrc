@@ -18,7 +18,7 @@ alias vi="nvim"
 parse_git_branch() {
     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
 }
-export PS1="\[\e[38;2;167;192;128m\]\W \[\e[31m\]\$(parse_git_branch)\[\e[0m\]\[\e[34m\]❯\[\e[00m\] "
+export PS1="\[\e[38;2;240;197;79m\]\W \[\e[31m\]\$(parse_git_branch)\[\e[0m\]\[\e[38;2;167;192;128m\]❯\[\e[00m\] "
 
 # Bash history
 HISTCONTROL=ignoredups:erasedups
@@ -89,12 +89,6 @@ source ~/.local/src/ocp-tool/completions/ocp.bash.completion
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - bash)"
-
-# GCP & CLAUDE
-export CLAUDE_CODE_USE_VERTEX=1
-export CLOUD_ML_REGION=us-east5
-export ANTHROPIC_VERTEX_PROJECT_ID=itpc-gcp-hcm-pe-eng-claude
-
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/averevki/.local/src/google-cloud-sdk/path.bash.inc' ]; then . '/home/averevki/.local/src/google-cloud-sdk/path.bash.inc'; fi
